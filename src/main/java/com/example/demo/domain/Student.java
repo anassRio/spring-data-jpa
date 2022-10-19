@@ -1,6 +1,9 @@
 package com.example.demo.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 import static javax.persistence.GenerationType.SEQUENCE;
@@ -12,6 +15,8 @@ import static javax.persistence.GenerationType.SEQUENCE;
                 @UniqueConstraint(name="student_email_unique", columnNames = "email")
         }
 )
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class Student {
     @Id
